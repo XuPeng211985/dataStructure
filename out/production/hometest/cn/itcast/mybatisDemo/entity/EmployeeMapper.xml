@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace="cn.itcast.mybatisDemo.entity.EmployeeDao">
+      <insert id="addEmployee" parameterType="cn.itcast.mybatisDemo.entity.Employee">
+        insert into employee (id,name,grade,sex,birthday,cardNum)
+                      values(#{id},#{name},#{grade},#{sex},#{birthday},#{cardNum})
+      </insert>
+      <update id="updateEmployee" parameterType="cn.itcast.mybatisDemo.entity.Employee">
+              update employee set name=#{name},grade=#{grade},sex=#{sex},birthday=#{birthday},cardNum=#{cardNum}
+                    where id=#{id}
+      </update>
+       <delete id="deleteEmployee" parameterType="cn.itcast.mybatisDemo.entity.Employee">
+           delete from employee where id=#{id}
+       </delete>
+      <select id="findById" parameterType="int" resultType="cn.itcast.mybatisDemo.entity.Employee">
+         select id,name,grade,sex,birthday,cardNum,deleted
+               from employee where id=#{id}
+      </select>
+ </mapper>

@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="mybatis-3.0.4">
+    <CLASSES>
+      <root url="jar://E:/linux/mybatis-3.0.4.jar/mybatis-3.0.4.jar!/" />
+      <root url="jar://E:/linux/mysql-connector-java-5.1.17-bin.jar/mysql-connector-java-5.1.17-bin.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
